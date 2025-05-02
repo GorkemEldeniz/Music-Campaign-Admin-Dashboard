@@ -4,9 +4,9 @@ export default function AuthLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<div className='flex min-h-screen w-full bg-slate-50'>
+		<div className='flex min-h-screen w-full bg-background'>
 			{/* Left side - Illustration/Branding */}
-			<div className='hidden w-1/2 flex-col justify-between bg-primary p-10 text-white lg:flex'>
+			<div className='hidden w-1/2 flex-col justify-between bg-primary p-10 text-primary-foreground lg:flex'>
 				<div>
 					<h1 className='text-2xl font-bold'>Music Campaign Admin</h1>
 					<p className='mt-2 text-sm opacity-80'>
@@ -17,7 +17,7 @@ export default function AuthLayout({
 				<div className='flex flex-col items-center justify-center py-8'>
 					<div className='relative h-64 w-64'>
 						{/* Replace with your actual logo or illustration */}
-						<div className='absolute inset-0 flex items-center justify-center rounded-full bg-white/10 text-4xl font-bold'>
+						<div className='absolute inset-0 flex items-center justify-center rounded-full bg-primary-foreground/10 text-4xl font-bold'>
 							MCA
 						</div>
 					</div>

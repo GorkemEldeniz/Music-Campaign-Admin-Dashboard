@@ -42,7 +42,7 @@ export default function SignInPage() {
 
 		try {
 			const supabase = createClient();
-			const { data, error } = await supabase.auth.signInWithPassword({
+			const { error } = await supabase.auth.signInWithPassword({
 				email: values.email,
 				password: values.password,
 			});
@@ -52,11 +52,6 @@ export default function SignInPage() {
 				setErrorMessage(
 					error.message || "Failed to sign in. Please check your credentials."
 				);
-			}
-
-			if (data) {
-				console.log(data);
-				// Successful sign-in is handled by Supabase auth redirect
 			}
 		} catch (error) {
 			console.error(error);
@@ -71,7 +66,7 @@ export default function SignInPage() {
 		<div className='space-y-6'>
 			<div className='space-y-2 text-center'>
 				<h1 className='text-3xl font-semibold tracking-tight'>Welcome back</h1>
-				<p className='text-sm text-slate-500'>
+				<p className='text-sm text-muted-foreground'>
 					Sign in to your account to continue
 				</p>
 			</div>
@@ -93,7 +88,7 @@ export default function SignInPage() {
 								<FormLabel>Email</FormLabel>
 								<FormControl>
 									<div className='relative'>
-										<MailIcon className='absolute left-3 top-2.5 h-5 w-5 text-slate-400' />
+										<MailIcon className='absolute left-3 top-2.5 h-5 w-5 text-muted-foreground' />
 										<Input
 											placeholder='you@example.com'
 											className='pl-10'
@@ -121,7 +116,7 @@ export default function SignInPage() {
 								</div>
 								<FormControl>
 									<div className='relative'>
-										<LockIcon className='absolute left-3 top-2.5 h-5 w-5 text-slate-400' />
+										<LockIcon className='absolute left-3 top-2.5 h-5 w-5 text-muted-foreground' />
 										<Input
 											type='password'
 											placeholder='••••••••'

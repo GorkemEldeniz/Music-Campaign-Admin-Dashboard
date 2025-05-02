@@ -60,7 +60,6 @@ export default function SignUpPage() {
 			}
 
 			if (data) {
-				console.log(data);
 				setIsSuccess(true);
 				form.reset();
 			}
@@ -78,7 +77,7 @@ export default function SignUpPage() {
 				<h1 className='text-3xl font-semibold tracking-tight'>
 					Create an account
 				</h1>
-				<p className='text-sm text-slate-500'>
+				<p className='text-sm text-muted-foreground'>
 					Enter your details below to get started
 				</p>
 			</div>
@@ -91,7 +90,7 @@ export default function SignUpPage() {
 			)}
 
 			{isSuccess && (
-				<div className='flex items-center gap-2 rounded-md bg-green-50 p-3 text-sm text-green-600'>
+				<div className='flex items-center gap-2 rounded-md bg-emerald-100 dark:bg-emerald-950/30 p-3 text-sm text-emerald-700 dark:text-emerald-300'>
 					<CheckCircleIcon className='h-4 w-4' />
 					<p>
 						Your account has been created. Please check your email for
@@ -110,7 +109,7 @@ export default function SignUpPage() {
 								<FormLabel>Email</FormLabel>
 								<FormControl>
 									<div className='relative'>
-										<MailIcon className='absolute left-3 top-2.5 h-5 w-5 text-slate-400' />
+										<MailIcon className='absolute left-3 top-2.5 h-5 w-5 text-muted-foreground' />
 										<Input
 											placeholder='you@example.com'
 											className='pl-10'
@@ -130,7 +129,7 @@ export default function SignUpPage() {
 								<FormLabel>Password</FormLabel>
 								<FormControl>
 									<div className='relative'>
-										<LockIcon className='absolute left-3 top-2.5 h-5 w-5 text-slate-400' />
+										<LockIcon className='absolute left-3 top-2.5 h-5 w-5 text-muted-foreground' />
 										<Input
 											type='password'
 											placeholder='Create a secure password'
@@ -139,7 +138,7 @@ export default function SignUpPage() {
 										/>
 									</div>
 								</FormControl>
-								<p className='text-xs text-slate-500'>
+								<p className='text-xs text-muted-foreground/70'>
 									Must be at least 8 characters
 								</p>
 								<FormMessage />
